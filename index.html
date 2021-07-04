@@ -4,7 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Budget Tracker</title>
   </head>
-  <body></body>
+  <body>
+    <div class="hed">
+      <input
+        type="number"
+        class="budget-input"
+        placeholder="Enter budget amount"
+      />
+      <button class="submit-budget">Submit</button>
+      <h2 class="total-budget">$69420.00</h2>
+    </div>
+
+    <div class="expense">
+      <input
+        type="number"
+        class="expense-name"
+        placeholder="Enter expense amount"
+      />
+      <input
+        type="text"
+        class="expense-description"
+        placeholder="Enter expense description"
+      />
+      <button class="enter-expense">Enter</button>
+    </div>
+
+    <div class="income">
+      <input
+        type="number"
+        class="income-name"
+        placeholder="Enter income amount"
+      />
+      <input
+        type="text"
+        class="income-description"
+        placeholder="Enter income description"
+      />
+      <button class="enter-income">Enter</button>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
 </html>
