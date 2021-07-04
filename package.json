@@ -1,0 +1,23 @@
+{
+  "name": "budget-tracker",
+  "version": "1.0.0",
+  "description": "An app that tracks your budget",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamzayt577/Budget-Tracker.git"
+  },
+  "author": "Hamza Shaikh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamzayt577/Budget-Tracker/issues"
+  },
+  "homepage": "https://github.com/hamzayt577/Budget-Tracker#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
