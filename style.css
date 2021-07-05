@@ -85,11 +85,30 @@ body {
   border-radius: 10px;
 }
 
-.expense button,
-.income button {
+.expense-income-buttons {
   background: #52abf5;
   border-radius: 11px;
   padding: 10px 45px;
+  color: #ffffff;
+  display: inline-block;
+  font: normal bold 3px/1 "Open Sans", sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-top: 15px;
+  background-color: grey;
+}
+
+.list-button {
+  background: #ff0000;
+  border-radius: 11px;
+  padding: 20px 45px;
   color: #ffffff;
   display: inline-block;
   font: normal bold 3px/1 "Open Sans", sans-serif;
