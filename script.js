@@ -33,6 +33,10 @@ enterExpenseBtn.addEventListener("click", (e) => {
   } else {
     // WILL IMPLEMENT THIS LATER
     expenseList(e);
+
+    // Clearing the inputs
+    inputExpenseAmount.value = "";
+    inputExpenseDescription.value = "";
   }
 });
 
@@ -48,6 +52,11 @@ const expenseList = (e) => {
   expenseDeleteBtn.innerText = "X";
   expenseDeleteBtn.classList.add("list-button");
   expenseLi.appendChild(expenseDeleteBtn);
+
+  // Deleting the list
+  expenseDeleteBtn.addEventListener("click", () => {
+    expenseDeleteBtn.parentElement.remove();
+  });
 };
 
 // Income
@@ -59,6 +68,10 @@ enterIncomeBtn.addEventListener("click", (e) => {
   } else {
     // WILL IMPLEMENT THIS LATER
     incomeList(e);
+
+    // Clearing the inputs
+    inputIncomeAmount.value = "";
+    inputIncomeDescription.value = "";
   }
 });
 
@@ -74,6 +87,11 @@ const incomeList = (e) => {
   incomeDeleteBtn.innerText = "X";
   incomeDeleteBtn.classList.add("list-button");
   incomeLi.appendChild(incomeDeleteBtn);
+
+  // Deleting the list
+  incomeDeleteBtn.addEventListener("click", () => {
+    incomeDeleteBtn.parentElement.remove();
+  });
 };
 
 // Init function
