@@ -31,12 +31,15 @@ enterExpenseBtn.addEventListener("click", (e) => {
   } else if (inputExpenseAmount.value === "0") {
     alert("Expense amount cannot be 0");
   } else {
-    // WILL IMPLEMENT THIS LATER
     expenseList(e);
 
     // Clearing the inputs
     inputExpenseAmount.value = "";
     inputExpenseDescription.value = "";
+
+    if (budget < 0) {
+      alert("You have went over budget!");
+    }
   }
 });
 
@@ -57,6 +60,10 @@ const expenseList = (e) => {
   expenseDeleteBtn.addEventListener("click", () => {
     expenseDeleteBtn.parentElement.remove();
   });
+
+  // Deducting the amount from the budget and updating the budget paragraph
+  budget = budget - parseFloat(inputExpenseAmount.value);
+  totalBudgetParagraph.innerText = `$${budget}`;
 };
 
 // Income
@@ -66,7 +73,6 @@ enterIncomeBtn.addEventListener("click", (e) => {
   } else if (inputIncomeAmount.value === "0") {
     alert("Expense amount cannot be 0");
   } else {
-    // WILL IMPLEMENT THIS LATER
     incomeList(e);
 
     // Clearing the inputs
