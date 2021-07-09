@@ -5,10 +5,12 @@ const totalBudgetParagraph = document.querySelector(".total-budget");
 const inputExpenseAmount = document.querySelector(".expense-amount");
 const inputExpenseDescription = document.querySelector(".expense-description");
 const enterExpenseBtn = document.querySelector(".enter-expense");
+const expenseUl = document.querySelector(".expense-list");
 // income elements
 const inputIncomeAmount = document.querySelector(".income-amount");
 const inputIncomeDescription = document.querySelector(".income-description");
 const enterIncomeBtn = document.querySelector(".enter-income");
+const incomeUl = document.querySelector(".income-list");
 
 let budget = parseFloat(budgetInput.value);
 
@@ -23,26 +25,56 @@ submitBudgetBtn.addEventListener("click", () => {
 });
 
 // Expense
-enterExpenseBtn.addEventListener("click", () => {
+enterExpenseBtn.addEventListener("click", (e) => {
   if (inputExpenseAmount.value === "" && inputExpenseDescription.value === "") {
     alert("Please enter expense amount and description");
   } else if (inputExpenseAmount.value === "0") {
     alert("Expense amount cannot be 0");
   } else {
     // WILL IMPLEMENT THIS LATER
+    expenseList(e);
   }
 });
 
+const expenseList = (e) => {
+  // Create LI
+  const expenseLi = document.createElement("li");
+  expenseLi.innerText = `${inputExpenseDescription.value} `;
+  expenseLi.classList.add("expense-list-element");
+  expenseUl.appendChild(expenseLi);
+
+  // Create Button
+  const expenseDeleteBtn = document.createElement("button");
+  expenseDeleteBtn.innerText = "X";
+  expenseDeleteBtn.classList.add("list-button");
+  expenseLi.appendChild(expenseDeleteBtn);
+};
+
 // Income
-enterIncomeBtn.addEventListener("click", () => {
+enterIncomeBtn.addEventListener("click", (e) => {
   if (inputIncomeAmount.value === "" && inputIncomeDescription.value === "") {
     alert("Please enter income amount and description");
   } else if (inputIncomeAmount.value === "0") {
     alert("Expense amount cannot be 0");
   } else {
     // WILL IMPLEMENT THIS LATER
+    incomeList(e);
   }
 });
+
+const incomeList = (e) => {
+  // Create LI
+  const incomeLi = document.createElement("li");
+  incomeLi.innerText = `${inputIncomeDescription.value} `;
+  incomeLi.classList.add("income-list-element");
+  incomeUl.appendChild(incomeLi);
+
+  // Create Button
+  const incomeDeleteBtn = document.createElement("button");
+  incomeDeleteBtn.innerText = "X";
+  incomeDeleteBtn.classList.add("list-button");
+  incomeLi.appendChild(incomeDeleteBtn);
+};
 
 // Init function
 const init = () => {
