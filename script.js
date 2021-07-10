@@ -47,7 +47,7 @@ enterExpenseBtn.addEventListener("click", (e) => {
 const expenseList = (e) => {
   // Create LI
   const expenseLi = document.createElement("li");
-  expenseLi.innerText = `${inputExpenseDescription.value} `;
+  expenseLi.innerText = `${inputExpenseDescription.value} $${inputExpenseAmount.value} `;
   expenseLi.classList.add("expense-list-element");
   expenseUl.appendChild(expenseLi);
 
@@ -85,7 +85,7 @@ enterIncomeBtn.addEventListener("click", (e) => {
 const incomeList = (e) => {
   // Create LI
   const incomeLi = document.createElement("li");
-  incomeLi.innerText = `${inputIncomeDescription.value} `;
+  incomeLi.innerText = `${inputIncomeDescription.value} $${inputIncomeAmount.value} `;
   incomeLi.classList.add("income-list-element");
   incomeUl.appendChild(incomeLi);
 
