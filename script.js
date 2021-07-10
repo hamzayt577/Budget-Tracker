@@ -13,6 +13,7 @@ const enterIncomeBtn = document.querySelector(".enter-income");
 const incomeUl = document.querySelector(".income-list");
 
 let budget = parseFloat(budgetInput.value);
+budget = 0;
 
 submitBudgetBtn.addEventListener("click", () => {
   if (budgetInput.value === "") {
@@ -98,6 +99,10 @@ const incomeList = (e) => {
   incomeDeleteBtn.addEventListener("click", () => {
     incomeDeleteBtn.parentElement.remove();
   });
+
+  // Adding the income to the budget
+  budget = parseFloat(inputIncomeAmount.value) + budget;
+  totalBudgetParagraph.innerText = `$${budget}`;
 };
 
 // Init function
